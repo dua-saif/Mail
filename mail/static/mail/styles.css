@@ -1,0 +1,11 @@
+textarea {
+    min-height: 400px; /* Maintain ample writing space */
+}
+
+.email-seen {
+    background-color: #e0e0e0; /* Subtle gray for read messages */
+}
+
+.email-unseen {
+    background-color: #ffffff; /* White for unread messages */
+}

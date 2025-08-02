@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: Mail
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn project3.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: project3.settings
+      - key: PYTHON_VERSION
+        value: "3.10"
+      - key: DATABASE_URL
+        value: postgresql://mail_db_ynrf_user:ffaVBZaR3Rq6FhjqOUPfLBXeH0YV76wI@dpg-d278qhggjchc73fmfbfg-a.frankfurt-postgres.render.com/mail_db_ynrf
